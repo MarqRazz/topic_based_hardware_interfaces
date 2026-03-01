@@ -28,7 +28,7 @@ repos:
       - id: sort-simple-yaml
       - id: trailing-whitespace
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.3
+    rev: v0.15.4
     hooks:
       - id: ruff
         args: ['--output-format=full', '--fix', '--config', 'pyproject.toml']
@@ -40,14 +40,14 @@ repos:
         args: ['--write-changes']
         exclude: CHANGELOG.rst
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v21.1.2
+    rev: v22.1.0
     hooks:
       - id: clang-format
         files: \.(c|cc|cxx|cpp|frag|glsl|h|hpp|hxx|ih|ispc|ipp|java|m|proto|vert)$
         # -i arg is included by default by the hook
         args: ['-fallback-style=none']
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.37.1
+    rev: v1.38.0
     hooks:
       - id: yamllint
         args: ["--no-warnings", "--config-data", "{extends: default, rules: {line-length: disable}}"]
@@ -59,6 +59,6 @@ repos:
       - id: hadolint-docker
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.21.0
+    rev: v3.21.2
     hooks:
     -   id: pyupgrade
